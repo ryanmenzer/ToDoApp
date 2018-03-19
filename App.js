@@ -14,37 +14,16 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+import ToDoList from './src/components/ToDoList';
+
+export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.header}>
-        To Do List:
-        </Text>
-        <View style={styles.content}>
-          <Text style={styles.item}>1. Go to store</Text>
-          <Text style={styles.item}>2. Get beer</Text>
-          <Text style={styles.item}>3. Party on!</Text>
-        </View>
-      </View>
+      <ToDoList />
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  header: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  item: {
-    padding: 10
-  },
+
 });
